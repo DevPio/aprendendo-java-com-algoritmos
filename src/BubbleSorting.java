@@ -1,10 +1,15 @@
 
 public class BubbleSorting {
 
+	
 	public static void main(String[] args) {
 		int[] items = { 60, 50, 95, 80, 70 };
 
 		BubbleSorting.sort(items);
+		
+		char a = 65;
+		
+		System.out.println(a);
 
 		for (int i = 0; i < items.length; i++) {
 			System.out.println(items[i]);
