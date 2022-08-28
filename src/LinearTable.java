@@ -17,9 +17,9 @@ public class LinearTable {
 		for (int i = 0; i <= middle; i++) {
 			int temp = array[i];
 
-			array[i] = array[lenght - i -1];
-			array[lenght - i -1] = temp;
-			
+			array[i] = array[lenght - i - 1];
+			array[lenght - i - 1] = temp;
+
 		}
 	}
 }
