@@ -5,10 +5,10 @@ public class SelectSort {
 		int[] scores = { 60, 80, 95, 50, 70 };
 
 		sort(scores);
-		
-		for(int i = 0; i < scores.length; i++) {
+
+		for (int i = 0; i < scores.length; i++) {
 			System.out.println(scores[i]);
-			
+
 		}
 	}
 
