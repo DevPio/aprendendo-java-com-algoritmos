@@ -21,10 +21,9 @@ public class Search {
 		}
 		return -1;
 	}
-	
-	
+
 	public static int BinarySearch(int[] array, int searchValue) {
-		
+
 		return BinarySearchHelper(array, searchValue, 0, array.length - 1);
 	}
 
@@ -46,23 +45,25 @@ public class Search {
 		return BinarySearchHelper(array, searchValue, middle + 1, hightParam);
 
 	}
-	
-	
+
 	public static int BinarySearchLoop(int[] array, int searchValue) {
-		
+
 		int low = 0;
-		
-		int high = array.length -1;
-		
+
+		int high = array.length - 1;
+
 		int middle;
-		while(low <= high) {
+		while (low <= high) {
 			middle = (low + high) / 2;
-			
-			if(array[middle] == searchValue) return middle;
-			if(array[middle] < searchValue)  low++;
-			else high--;
+
+			if (array[middle] == searchValue)
+				return middle;
+			if (array[middle] < searchValue)
+				low++;
+			else
+				high--;
 		}
-		
+
 		return -1;
 	}
 }
