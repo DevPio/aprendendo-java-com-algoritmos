@@ -13,10 +13,25 @@ public class LinkList {
 		list.insert(4);
 		list.insert(5);
 		list.insert(6);
-		
-		list.remove(1);
-		
+
+		list.remove(6);
+
+		list.insertPostion(2, new Node(2323));;
 		list.print();
+	}
+
+	public void insertPostion(int insertPosition, Node newNode) {
+
+		Node currentNode = this.head;
+		int index = 0;
+		while (currentNode != null && index < insertPosition - 1) {
+
+			currentNode = currentNode.next;
+			index++;
+		}
+		
+		newNode.next = currentNode.next;
+		currentNode.next = newNode;
 	}
 
 	public void insert(int value) {
@@ -38,9 +53,9 @@ public class LinkList {
 
 	public void remove(int removePosition) {
 		Node currentNode = this.head;
-		
-		if(removePosition - 1 == 0) {
-			
+
+		if (removePosition - 1 == 0) {
+
 			Node temp = currentNode.next;
 			this.head = temp;
 			return;
@@ -52,12 +67,11 @@ public class LinkList {
 			currentNode = currentNode.next;
 			i++;
 		}
-		
+
 		Node temp = currentNode.next;
-		
+
 		prev.next = temp;
-		
-		
+
 	}
 
 	public void print() {
